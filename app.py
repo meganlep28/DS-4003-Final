@@ -2,7 +2,19 @@ import pandas as pd
 import plotly.express as px
 import numpy as np
 from dash import Dash, dcc, html, Input, Output, State, callback
-#title and cols rows
+
+###loading JSON file that has the geometry information for US counties
+
+from urllib.request import urlopen
+import json
+with urlopen('https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json') as response:
+    counties = json.load(response)
+
+counties["features"][0]
+#sometimes json will run window forcibly closed host error; make a syntax error and reload to fix
+
+
+
 #load data
 mergedRace = pd.read_csv("FINAL_DATA.csv", header = 0, dtype={"5-digit FIPS Code": str} )
 
