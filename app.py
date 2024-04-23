@@ -4,7 +4,7 @@ import numpy as np
 from dash import Dash, dcc, html, Input, Output, State, callback
 #title and cols rows
 #load data
-mergedRace = pd.read_csv("last.csv", header = 0, dtype={"5-digit FIPS Code": str} )
+mergedRace = pd.read_csv("FINAL_DATA.csv", header = 0, dtype={"5-digit FIPS Code": str} )
 
 
 stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css'] # load the CSS stylesheet
